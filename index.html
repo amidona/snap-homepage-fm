@@ -7,6 +7,9 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
 </head>
@@ -15,27 +18,35 @@
     <div class="content">
         <header>
             <figure><img src="./images/logo.svg" alt="snap logo"></figure>
-            <figure><img id="open-menu" src="./images/icon-menu.svg" alt="open menu icon"></figure>
+            <figure id="open-menu"><img src="./images/icon-menu.svg" alt="open menu icon"></figure>
             <div class="menu">
                 <div class="outer-modal">
                     <div class="inner-modal">
-                        <figure><img id="close-menu" src="./images/icon-close-menu.svg" alt="close menu icon"></figure>
-                        <ul>
-                            <li class="parent"><a href="#">Features<a></li>
-                            <li class="child feature"><a href="#">Todo List<a></li>
-                            <li class="child feature"><a href="#">Calendar<a></li>
-                            <li class="child feature"><a href="#">Reminders<a></li>
-                            <li class="child feature"><a href="#">Planning<a></li>
-                            <li class="parent"><a href="#">Company<a></li>
-                            <li class="child company"><a href="#">History<a></li>
-                            <li class="child company"><a href="#">Our Team<a></li>
-                            <li class="child company"><a href="#">Blog<a></li>
-                            <li><a href="#">Careers<a></li>
-                            <li><a href="#">About<a></li>
+                        <figure id="close-menu"><img src="./images/icon-close-menu.svg" alt="close menu icon"></figure>
+                        <ul id="menu-options">
+                            <li class="parent"><a href="#">Features<figure class="arrows"><img src="./images/icon-arrow-down.svg" alt="click to expand"></figure></a></li>
+                            <li class="child feature"><a href="#">
+                                    <figure class="icon"><img src="./images/icon-todo.svg" alt="list icon"></figure>Todo List
+                                </a></li>
+                            <li class="child feature"><a href="#">
+                                    <figure class="icon"><img src="./images/icon-calendar.svg" alt="calendar icon"></figure>Calendar
+                                </a></li>
+                            <li class="child feature"><a href="#">
+                                    <figure class="icon"><img src="./images/icon-reminders.svg" alt="bell icon"></figure>Reminders
+                                </a></li>
+                            <li class="child feature"><a href="#">
+                                    <figure class="icon"><img src="./images/icon-planning.svg" alt="clock icon"></figure>Planning
+                                </a></li>
+                            <li class="parent"><a href="#">Company<figure class="arrows"><img src="./images/icon-arrow-down.svg" alt="click to expand"></figure></a></li>
+                            <li class="child company"><a href="#">History</a></li>
+                            <li class="child company"><a href="#">Our Team</a></li>
+                            <li class="child company"><a href="#">Blog</a></li>
+                            <li class="parent"><a href="#">Careers</a></li>
+                            <li class="parent"><a href="#">About</a></li>
                         </ul>
-                        <ul>
-                            <li><a href="#">Login<a></li>
-                            <li id="register"><a href="#">Register<a></li>
+                        <ul id="sign-in-option">
+                            <li><a href="#">Login</a></li>
+                            <li id="register"><a href="#">Register</a></li>
                         </ul>
                     </div>
                 </div>
