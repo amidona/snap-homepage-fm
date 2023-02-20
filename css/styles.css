@@ -24,7 +24,23 @@ a {
     text-decoration: none;
 }
 
-/****** Menu Styles ******/
+/****** HEADER STYLES ******/
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 1.25em;
+}
+
+/*** Menu Styles ***/
+.menu {
+    display: none;
+}
+
+.menu.open {
+    display: flex;
+}
+
 .outer-modal {
     display: flex;
     background: hsla(0, 0%, 0%, 0.6);
@@ -35,13 +51,6 @@ a {
     left: 0;
     justify-content: flex-end;
     align-items: center;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.outer-modal.open {
-    opacity: 1;
-    pointer-events: all;
 }
 
 .inner-modal {
@@ -110,9 +119,47 @@ a {
     margin: 0 .5em;
 }
 
+/****** MAIN STYLES ******/
+.main {
+    text-align: center;
+}
+
+.main h1 {
+    padding: 1em .5em .5em;
+}
+
+.main p {
+    color: hsl(0, 0%, 41%);
+    font-size: .85em;
+    line-height: 1.5em;
+    padding: 0 22px 22px 22px;
+}
+
+#learn-more {
+    background-color: hsl(0, 0%, 8%);
+    border: none;
+    border-radius: 13px;
+    color: hsl(0, 0%, 98%);
+    padding: 10px 20px;
+    font: inherit;
+    font-size: .85em;
+    margin-bottom: 30px;
+}
+
+.clients {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.clients>* {
+    padding: 15px;
+}
+
 /* Attribution Styles */
 .attribution {
     font-size: 11px;
+    margin-top: 15px;
     text-align: center;
 }
 
