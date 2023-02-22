@@ -32,6 +32,10 @@ header {
     padding: 1.25em;
 }
 
+#open-menu {
+    cursor: pointer;
+}
+
 /*** Menu Styles ***/
 .menu {
     display: none;
@@ -68,6 +72,7 @@ header {
 
 #close-menu {
     padding: 1em;
+    cursor: pointer;
 }
 
 .menu ul {
