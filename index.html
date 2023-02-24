@@ -17,7 +17,7 @@
 <body>
     <div class="content">
         <header>
-            <figure><img src="./images/logo.svg" alt="snap logo"></figure>
+            <figure id="logo"><img src="./images/logo.svg" alt="snap logo"></figure>
             <figure id="open-menu"><img src="./images/icon-menu.svg" alt="open menu icon" role="button" tabindex="0"></figure>
             <div class="menu">
                 <div class="outer-modal">
@@ -25,26 +25,30 @@
                         <figure id="close-menu"><img src="./images/icon-close-menu.svg" alt="close menu icon" role="button" tabindex="0"></figure>
                         <ul id="menu-options">
                             <li class="parent feature"><a href="#">Features<figure class="arrows"><img src="./images/icon-arrow-down.svg" alt="click to expand"></figure></a></li>
-                            <li class="child feature"><a href="#">
-                                    <figure class="icon"><img src="./images/icon-todo.svg" alt="list icon"></figure>Todo List
-                                </a></li>
-                            <li class="child feature"><a href="#">
-                                    <figure class="icon"><img src="./images/icon-calendar.svg" alt="calendar icon"></figure>Calendar
-                                </a></li>
-                            <li class="child feature"><a href="#">
-                                    <figure class="icon"><img src="./images/icon-reminders.svg" alt="bell icon"></figure>Reminders
-                                </a></li>
-                            <li class="child feature"><a href="#">
-                                    <figure class="icon"><img src="./images/icon-planning.svg" alt="clock icon"></figure>Planning
-                                </a></li>
+                            <div id="feature-children">
+                                <li class="child feature"><a href="#">
+                                        <figure class="icon"><img src="./images/icon-todo.svg" alt="list icon"></figure>Todo List
+                                    </a></li>
+                                <li class="child feature"><a href="#">
+                                        <figure class="icon"><img src="./images/icon-calendar.svg" alt="calendar icon"></figure>Calendar
+                                    </a></li>
+                                <li class="child feature"><a href="#">
+                                        <figure class="icon"><img src="./images/icon-reminders.svg" alt="bell icon"></figure>Reminders
+                                    </a></li>
+                                <li class="child feature"><a href="#">
+                                        <figure class="icon"><img src="./images/icon-planning.svg" alt="clock icon"></figure>Planning
+                                    </a></li>
+                            </div>
                             <li class="parent company"><a href="#">Company<figure class="arrows"><img src="./images/icon-arrow-down.svg" alt="click to expand"></figure></a></li>
-                            <li class="child company"><a href="#">History</a></li>
-                            <li class="child company"><a href="#">Our Team</a></li>
-                            <li class="child company"><a href="#">Blog</a></li>
+                            <div id="company-children">
+                                <li class="child company"><a href="#">History</a></li>
+                                <li class="child company"><a href="#">Our Team</a></li>
+                                <li class="child company"><a href="#">Blog</a></li>
+                            </div>
                             <li class="parent"><a href="#">Careers</a></li>
                             <li class="parent"><a href="#">About</a></li>
                         </ul>
-                        <ul id="sign-in-option">
+                        <ul id="sign-in-options">
                             <li><a href="#">Login</a></li>
                             <li id="register"><a href="#">Register</a></li>
                         </ul>
@@ -53,15 +57,17 @@
             </div>
         </header>
         <div class="main">
-            <figure><img id="hero" src="./images/image-hero-mobile.png" alt="Geometric shapes surrounding the photo of a Black man working on a laptop"></figure>
-            <h1>Make remote work</h1>
-            <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-            <button id="learn-more">Learn more</button>
-            <div class="clients">
-                <figure><img src="./images/client-databiz.svg" alt="databiz logo"></figure>
-                <figure><img src="./images/client-audiophile.svg" alt="audiophile logo"></figure>
-                <figure><img src="./images/client-meet.svg" alt="meet logo"></figure>
-                <figure><img src="./images/client-maker.svg" alt="maker logo"></figure>
+            <figure id="hero-fig"><img id="hero" src="./images/image-hero-mobile.png" alt="Geometric shapes surrounding the photo of a Black man working on a laptop"></figure>
+            <div id="main-text">
+                <h1>Make remote work</h1>
+                <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+                <button id="learn-more">Learn more</button>
+                <div class="clients">
+                    <figure><img src="./images/client-databiz.svg" alt="databiz logo"></figure>
+                    <figure><img src="./images/client-audiophile.svg" alt="audiophile logo"></figure>
+                    <figure><img src="./images/client-meet.svg" alt="meet logo"></figure>
+                    <figure><img src="./images/client-maker.svg" alt="maker logo"></figure>
+                </div>
             </div>
         </div>
     </div>

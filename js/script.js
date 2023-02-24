@@ -4,8 +4,8 @@ const menu = document.querySelector(".menu");
 const outerModal = document.querySelector(".outer-modal");
 const featureParent = document.querySelector(".parent.feature");
 const companyParent = document.querySelector(".parent.company");
-const featureChildren = document.querySelectorAll(".child.feature");
-const companyChildren = document.querySelectorAll(".child.company");
+const featureChildren = document.querySelector("#feature-children");
+const companyChildren = document.querySelector("#company-children");
 
 // Deal with Opening and Closing Menu
 function openMenu(e) {
@@ -36,18 +36,14 @@ window.addEventListener("keyup", (e) => {
     }
 });
 
-// Deal with Operating Menu
+// Deal with Menu
 function featureChildDisplay (e) {
     if (e.type === "click" || e.key === "Enter") {
-        featureChildren.forEach(featureChild => {
-            if (featureChild.style.display = "none") {
-                featureChild.style.display = "block";
-                console.log("open");
-            } else if (featureChild.style.display = "block") {
-                featureChild.style.display = "none";
-                console.log("close");
-            }
-        });
+        if (featureChildren.classList.contains("open")) {
+            featureChildren.classList.remove("open");
+        } else {
+            featureChildren.classList.add("open");     
+        }
     }
 };
 featureParent.addEventListener("click", featureChildDisplay);
@@ -55,15 +51,11 @@ featureParent.addEventListener("keyup", featureChildDisplay);
 
 function companyChildDisplay (e) {
     if (e.type === "click" || e.key === "Enter") {
-        companyChildren.forEach(companyChild => {
-            if (companyChild.style.display = "none") {
-                companyChild.style.display = "block";
-                console.log("open");
-            } else if (companyChild.style.display = "block") {
-                companyChild.style.display = "none";
-                console.log("close");
-            }
-        });
+        if (companyChildren.classList.contains("open")) {
+            companyChildren.classList.remove("open");
+        } else {
+            companyChildren.classList.add("open");     
+        }
     }
 };
 companyParent.addEventListener("click", companyChildDisplay);

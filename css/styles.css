@@ -91,10 +91,21 @@ header {
 
 .child {
     padding-left: 2em;
+}
+
+#feature-children {
     display: none;
 }
 
-.child.open {
+#feature-children.open {
+    display: block;
+}
+
+#company-children {
+    display: none;
+}
+
+#company-children.open {
     display: block;
 }
 
@@ -111,7 +122,7 @@ header {
     padding-right: 1em;
 }
 
-#sign-in-option li {
+#sign-in-options li {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -170,4 +181,115 @@ header {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+/********************** DESKTOP STYLES  ******************************/
+@media (min-width: 1200px) {
+
+
+    /****** HEADER STYLES ******/
+
+    header {
+        align-items: center;
+    }
+
+    #open-menu {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        width: 100%;
+    }
+
+    .outer-modal {
+        position: relative;
+        background: none;
+        height: fit-content;
+        width: 100%;
+
+    }
+
+    .inner-modal {
+        position: relative;
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #close-menu {
+        display: none;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 0;
+    }
+
+    .menu li {
+        padding: 0;
+    }
+
+    #menu-options {
+        justify-content: space-around;
+    }
+
+    #sign-in-options {
+        justify-content: flex-end;
+        align-items: baseline;
+    }
+
+    #register {
+        margin-left: 1.25em;
+        padding: .5em .75em;
+    }
+
+    /****** MAIN STYLES ******/
+    .main {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row-reverse;
+        margin-top: 2em;
+    }
+
+    #hero-fig {
+        margin: 0 60px;
+        flex: 1;
+    }
+
+    #hero {
+        content: url(../images/image-hero-desktop.png);
+    }
+
+    #main-text {
+        padding: 40px 40px 0 90px;
+        text-align: left;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        flex: 1.5;
+    }
+
+    .main h1 {
+        font-size: 3em;
+        padding: 0;
+        margin-right: 150px;
+    }
+
+    .main p {
+        padding: 0;
+        margin-right: 150px;
+    }
+
+    #learn-more {
+        width: 30%;
+        margin: 0;
+    }
+
+
+
 }
