@@ -6,6 +6,8 @@ const featureParent = document.querySelector(".parent.feature");
 const companyParent = document.querySelector(".parent.company");
 const featureChildren = document.querySelector("#feature-children");
 const companyChildren = document.querySelector("#company-children");
+const featureArrow = document.querySelector(".arrows.feature");
+const companyArrow = document.querySelector(".arrows.company");
 
 // Deal with Opening and Closing Menu
 function openMenu(e) {
@@ -41,8 +43,10 @@ function featureChildDisplay (e) {
     if (e.type === "click" || e.key === "Enter") {
         if (featureChildren.classList.contains("open")) {
             featureChildren.classList.remove("open");
+            featureArrow.innerHTML = `<img src="./images/icon-arrow-down.svg">`
         } else {
-            featureChildren.classList.add("open");     
+            featureChildren.classList.add("open");
+            featureArrow.innerHTML = `<img src="./images/icon-arrow-up.svg">`
         }
     }
 };
@@ -53,8 +57,10 @@ function companyChildDisplay (e) {
     if (e.type === "click" || e.key === "Enter") {
         if (companyChildren.classList.contains("open")) {
             companyChildren.classList.remove("open");
+            companyArrow.innerHTML = `<img src="./images/icon-arrow-down.svg">`
         } else {
-            companyChildren.classList.add("open");     
+            companyChildren.classList.add("open");   
+            companyArrow.innerHTML = `<img src="./images/icon-arrow-up.svg">`  
         }
     }
 };

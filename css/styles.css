@@ -190,7 +190,7 @@ header {
     /****** HEADER STYLES ******/
 
     header {
-        align-items: center;
+        align-items: flex-start;
     }
 
     #open-menu {
@@ -200,6 +200,7 @@ header {
     .menu {
         display: flex;
         width: 100%;
+
     }
 
     .outer-modal {
@@ -217,7 +218,7 @@ header {
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
-        align-items: center;
+
     }
 
     #close-menu {
@@ -236,6 +237,26 @@ header {
 
     #menu-options {
         justify-content: space-around;
+    }
+
+    #feature-children,
+    #company-children {
+        border-radius: 10px;
+        box-shadow: 0 50px 100px rgba(50, 50, 93, .1), 0 15px 35px rgba(50, 50, 93, .15), 0 5px 15px rgba(0, 0, 0, .1);
+        padding: 20px;
+        flex-direction: column;
+        position: absolute;
+        margin-top: 10px;
+    }
+
+    #feature-children>*,
+    #company-children>* {
+        padding: 5px;
+    }
+
+    #feature-children.open,
+    #company-children.open {
+        display: flex;
     }
 
     #sign-in-options {
@@ -266,7 +287,7 @@ header {
     }
 
     #main-text {
-        padding: 40px 40px 0 90px;
+        padding: 100px 40px 0 90px;
         text-align: left;
         display: flex;
         flex-wrap: wrap;
