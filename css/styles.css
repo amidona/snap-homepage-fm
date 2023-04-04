@@ -159,7 +159,9 @@ header {
     padding: 10px 20px;
     font: inherit;
     font-size: .85em;
+    font-weight: 700;
     margin-bottom: 30px;
+    cursor: pointer;
 }
 
 .clients {
