@@ -23,10 +23,10 @@
                 <div class="outer-modal">
                     <div class="inner-modal">
                         <figure id="close-menu"><img src="./images/icon-close-menu.svg" alt="close menu icon" role="button" tabindex="0"></figure>
-                        <ul id="menu-options">
+                        <div id="menu-options">
                             <div class="feature">
-                                <li class="parent feature"><a href="#">Features<figure class="arrows feature"><img src="./images/icon-arrow-down.svg" alt="click to expand"></figure></a></li>
-                                <div id="feature-children">
+                                <a href="#" class="parent feature">Features<figure class="arrows feature"><img src="./images/icon-arrow-down.svg" alt="hover to expand"></figure></a>
+                                <ul id="feature-children">
                                     <li class="child feature"><a href="#">
                                             <figure class="icon"><img src="./images/icon-todo.svg" alt="list icon"></figure>Todo List
                                         </a></li>
@@ -39,23 +39,23 @@
                                     <li class="child feature"><a href="#">
                                             <figure class="icon"><img src="./images/icon-planning.svg" alt="clock icon"></figure>Planning
                                         </a></li>
-                                </div>
+                                </ul>
                             </div>
                             <div class="company">
-                                <li class="parent company"><a href="#">Company<figure class="arrows company"><img src="./images/icon-arrow-down.svg" alt="click to expand"></figure></a></li>
-                                <div id="company-children">
+                                <a href="#" class="parent company">Company<figure class="arrows company"><img src="./images/icon-arrow-down.svg" alt="hover to expand"></figure></a>
+                                <ul id="company-children">
                                     <li class="child company"><a href="#">History</a></li>
                                     <li class="child company"><a href="#">Our Team</a></li>
                                     <li class="child company"><a href="#">Blog</a></li>
-                                </div>
+                                </ul>
                             </div>
-                            <li class="parent"><a href="#">Careers</a></li>
-                            <li class="parent"><a href="#">About</a></li>
-                        </ul>
-                        <ul id="sign-in-options">
-                            <li><a href="#">Login</a></li>
-                            <li id="register"><a href="#">Register</a></li>
-                        </ul>
+                            <a href="#" class="parent">Careers</a>
+                            <a href="#" class="parent">About</a>
+                        </div>
+                        <div id="sign-in-options">
+                            <a href="#">Login</a>
+                            <a href="#" id="register">Register</a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -3,6 +3,7 @@
 - Medium Gray: hsl(0, 0%, 41%)
 - Almost Black: hsl(0, 0%, 8%) */
 
+/******* BASE STYLES ********/
 * {
     margin: 0;
     padding: 0;
@@ -46,39 +47,45 @@ header {
 }
 
 .outer-modal {
-    display: flex;
-    background: hsla(0, 0%, 0%, 0.6);
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    justify-content: flex-end;
     align-items: center;
+    background: hsla(0, 0%, 0%, 0.6);
+    display: flex;
+    height: 100vh;
+    justify-content: flex-end;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
 }
 
 .inner-modal {
+    align-content: flex-start;
     background: hsl(0, 0%, 98%);
     color: hsl(0, 0%, 41%);
-    font-size: .8em;
-    position: fixed;
-    height: 100vh;
-    width: 65vw;
     display: flex;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    font-size: .8em;
+    height: 100vh;
+    justify-content: flex-start;
+    padding: .5em;
+    position: fixed;
+    width: 65vw;
 }
 
 #close-menu {
-    padding: 1em;
     cursor: pointer;
+    padding: 1.2em;
+    width: 10%;
+    align-self: flex-end;
+}
+
+#menu-options {
+    padding: 0 2em;
 }
 
 .menu ul {
     list-style: none;
-    width: 100%;
-    padding: 1em;
 }
 
 .menu li {
@@ -86,11 +93,11 @@ header {
 }
 
 .parent {
-    padding: .5em 0;
+    padding: .75em 0;
 }
 
 .child {
-    padding-left: 2em;
+    padding-left: 1.5em;
 }
 
 #feature-children {
@@ -122,7 +129,7 @@ header {
     padding-right: 1em;
 }
 
-#sign-in-options li {
+#sign-in-options a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -148,20 +155,20 @@ header {
     color: hsl(0, 0%, 41%);
     font-size: .85em;
     line-height: 1.5em;
-    padding: 0 22px 22px 22px;
+    padding: 0 1.2em 1.2em 1.2em;
 }
 
 #learn-more {
     background-color: hsl(0, 0%, 8%);
     border: none;
-    border-radius: 13px;
+    border-radius: 1em;
     color: hsl(0, 0%, 98%);
-    padding: 10px 20px;
+    cursor: pointer;
     font: inherit;
     font-size: .85em;
     font-weight: 700;
-    margin-bottom: 30px;
-    cursor: pointer;
+    margin-bottom: 2.3em;
+    padding: .75em 2em;
 }
 
 .clients {
@@ -171,13 +178,13 @@ header {
 }
 
 .clients>* {
-    padding: 15px;
+    padding: 1em;
 }
 
 /* Attribution Styles */
 .attribution {
-    font-size: 11px;
-    margin-top: 15px;
+    font-size: .7em;
+    margin-top: 2em;
     text-align: center;
 }
 
@@ -202,58 +209,54 @@ header {
     .menu {
         display: flex;
         width: 100%;
-
     }
 
     .outer-modal {
-        position: relative;
         background: none;
         height: fit-content;
+        position: relative;
         width: 100%;
-
     }
 
     .inner-modal {
-        position: relative;
-        height: fit-content;
-        width: 100%;
         display: flex;
+        flex-direction: row;
         flex-wrap: nowrap;
+        height: fit-content;
         justify-content: space-between;
-
+        position: relative;
+        width: 100%;
     }
 
     #close-menu {
         display: none;
     }
 
-    .menu ul {
-        display: flex;
-        flex-wrap: nowrap;
-        padding: 0;
-    }
-
-    .menu li {
-        padding: 0;
-    }
-
     #menu-options {
-        justify-content: space-around;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #sign-in-options {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
     }
 
     #feature-children,
     #company-children {
-        border-radius: 10px;
+        border-radius: .85em;
         box-shadow: 0 50px 100px rgba(50, 50, 93, .1), 0 15px 35px rgba(50, 50, 93, .15), 0 5px 15px rgba(0, 0, 0, .1);
-        padding: 20px;
         flex-direction: column;
+        margin-top: .75em;
+        padding: 1.75em;
         position: absolute;
-        margin-top: 10px;
     }
 
     #feature-children>*,
     #company-children>* {
-        padding: 5px;
+        padding: .35em;
     }
 
     #feature-children.open,
@@ -262,8 +265,8 @@ header {
     }
 
     #sign-in-options {
-        justify-content: flex-end;
         align-items: baseline;
+        justify-content: flex-end;
     }
 
     #register {
@@ -280,8 +283,8 @@ header {
     }
 
     #hero-fig {
-        margin: 0 60px;
         flex: 1;
+        margin: 0 4.5em;
     }
 
     #hero {
@@ -289,30 +292,27 @@ header {
     }
 
     #main-text {
-        padding: 100px 40px 0 90px;
-        text-align: left;
-        display: flex;
-        flex-wrap: wrap;
         align-content: space-between;
+        display: flex;
         flex: 1.5;
+        flex-wrap: wrap;
+        padding: 6em 2em 0 4.5em;
+        text-align: left;
     }
 
     .main h1 {
         font-size: 3em;
+        margin-right: 3em;
         padding: 0;
-        margin-right: 150px;
     }
 
     .main p {
         padding: 0;
-        margin-right: 150px;
+        margin-right: 10em;
     }
 
     #learn-more {
-        width: 30%;
         margin: 0;
+        width: 30%;
     }
-
-
-
 }
